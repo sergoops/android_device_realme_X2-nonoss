@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    init.set_baseband.sh \
     init.qcom.rc \
     init.devicesetting.rc \
     fstab.qcom

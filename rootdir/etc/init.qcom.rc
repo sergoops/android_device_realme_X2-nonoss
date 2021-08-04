@@ -57,6 +57,15 @@ service prop-adap-main-gsi /vendor/bin/self-init gsimain
     override
     disabled
 
+on property:gsm.version.baseband=*
+    start set_baseband
+
+service set_baseband /product/bin/init.set_baseband.sh
+    class late_start
+    user system
+    group system
+    oneshot
+
 on property:sys.boot_completed=1
     # Runtime fs tuning
     write /sys/block/sda/queue/nr_requests 128
