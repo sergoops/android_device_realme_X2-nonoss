@@ -167,4 +167,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# USB
 PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.basic.x2
