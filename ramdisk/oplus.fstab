@@ -1,0 +1,5 @@
+#<src>                                            <mnt_point>                    <type>  <mnt_flags and options>                                  <fs_mgr_flags>
+loop@/vendor/euclid/odm.img                     /mnt/product/odm                  ext4     ro                                                   nofail,first_stage_mount
+/mnt/product/odm                                /odm                              none     ro,bind                                              nofail,first_stage_mount
+
+/dev/block/by-name/opporeserve2                 /mnt/vendor/opporeserve           ext4     nosuid,nodev,noatime,barrier=1                       wait,check,first_stage_mount,nofail
