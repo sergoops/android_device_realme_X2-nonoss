@@ -47,6 +47,22 @@ on post-fs-data
     #Hack until we build the vendor
     mount none /vendor/lost+found /vendor/overlay bind
 
+service prop-adap-core-gsi /vendor/bin/self-init gsicore
+    class core
+    user root
+    group root system radio
+    oneshot
+    override
+    disabled
+
+service prop-adap-main-gsi /vendor/bin/self-init gsimain
+    class main
+    user root
+    group root system radio
+    oneshot
+    override
+    disabled
+
 on boot
     # selinux nodes, hide permissive state
     chmod 0640 /sys/fs/selinux/enforce
