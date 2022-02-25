@@ -149,10 +149,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# Power
-PRODUCT_PACKAGES += \
-    power.qcom:64
-
 # QTI
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
@@ -199,11 +195,6 @@ PRODUCT_PACKAGES += \
 # Trust HAL
 #PRODUCT_PACKAGES += \
 #    lineage.trust@1.0-service
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.x2
-
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
