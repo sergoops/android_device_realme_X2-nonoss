@@ -60,7 +60,7 @@ service prop-adap-main-gsi /vendor/bin/self-init gsimain
 on property:gsm.version.baseband=*
     start set_baseband
 
-service set_baseband /product/bin/init.set_baseband.sh
+service set_baseband /system/bin/init.set_baseband.sh
     class late_start
     user system
     group system
