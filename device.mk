@@ -157,6 +157,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.basic.x2
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
