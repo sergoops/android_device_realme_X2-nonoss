@@ -12,12 +12,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/realme/X2/X2-vendor.mk)
 
-# Build with GMS
-WITH_GMS := true
-$(call inherit-product, vendor/google/gms/config.mk)
-$(call inherit-product, vendor/google-pixel/config.mk)
-$(call inherit-product, vendor/partner_modules/build/mainline_modules_s_flatten_apex.mk)
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
@@ -45,14 +39,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Copy the kernel from the prebuilts directory.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/kernel:kernel
-
-# Boot animation
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-
-#Apn file from prebuilts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/apns-conf.xml:system/etc/apns-conf.xml
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
