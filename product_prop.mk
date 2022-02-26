@@ -4,9 +4,6 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Get rid of that by overriding it in /product on eng builds
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.secure=0 \
-    ro.adb.secure=0
+    ro.adb.secure=0 \
+    persist.sys.usb.config=adb
 endif
-
-# Override Display Density
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=480
