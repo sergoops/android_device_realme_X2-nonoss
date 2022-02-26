@@ -128,7 +128,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors Hal
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl.x2
+    android.hardware.sensors@2.0-service.multihal.x2
 
 # Sensors
 PRODUCT_COPY_FILES += \
